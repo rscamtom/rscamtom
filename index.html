@@ -14,7 +14,7 @@
             --text-muted: #666666;
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Arial, sans-serif; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Arial, sans-serif; scroll-behavior: smooth; }
         body { color: var(--text-main); line-height: 1.6; background: #fff; }
 
         /* Navigation */
@@ -27,73 +27,80 @@
         .nav-links a { text-decoration: none; color: var(--text-main); margin-left: 30px; font-weight: 500; font-size: 15px; }
         .nav-links a:hover { color: var(--main-blue); }
 
-        /* Hero Section - Mirroring Petrust style */
+        /* Hero Section with AI Generated Solar Camera Poster */
         .hero {
-            background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)), 
-                        url('https://images.unsplash.com/photo-1557597774-9d2739f85a94?auto=format&fit=crop&w=1920&q=80');
-            background-size: cover; height: 600px; display: flex; align-items: center; padding: 0 8%;
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
+                        url('https://sc02.alicdn.com/kf/A7ecb9bb082844b77b8eca9cc3a622cbdf.png');
+            background-size: cover; background-position: center; height: 650px; display: flex; align-items: center; padding: 0 8%;
+            color: #fff;
         }
         .hero-content { max-width: 650px; }
-        .hero-content h1 { font-size: 42px; color: #000; margin-bottom: 20px; line-height: 1.2; }
-        .hero-content p { font-size: 18px; color: var(--text-muted); margin-bottom: 30px; }
-        .btn-blue { background: var(--main-blue); color: #fff; padding: 12px 30px; border-radius: 4px; text-decoration: none; font-weight: bold; }
+        .hero-content h1 { font-size: 48px; color: #fff; margin-bottom: 20px; line-height: 1.1; font-weight: 800; text-shadow: 0 2px 10px rgba(0,0,0,0.3); }
+        .hero-content p { font-size: 20px; color: #eee; margin-bottom: 30px; text-shadow: 0 1px 5px rgba(0,0,0,0.3); }
+        .btn-blue { background: var(--main-blue); color: #fff; padding: 15px 35px; border-radius: 4px; text-decoration: none; font-weight: bold; transition: 0.3s; }
+        .btn-blue:hover { background: #004494; transform: translateY(-2px); }
 
         /* Trust Bar */
-        .trust-bar { background: var(--main-blue); color: #fff; padding: 20px 8%; display: flex; justify-content: space-around; flex-wrap: wrap; }
+        .trust-bar { background: var(--main-blue); color: #fff; padding: 25px 8%; display: flex; justify-content: space-around; flex-wrap: wrap; }
         .trust-item { text-align: center; padding: 10px; }
-        .trust-item i { font-size: 24px; margin-bottom: 10px; display: block; }
+        .trust-item i { font-size: 28px; margin-bottom: 10px; display: block; }
 
         /* Section Global */
-        section { padding: 80px 8%; }
-        .section-header { text-align: center; margin-bottom: 50px; }
-        .section-header h2 { font-size: 32px; margin-bottom: 15px; position: relative; padding-bottom: 15px; }
-        .section-header h2::after { content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 60px; height: 3px; background: var(--main-blue); }
+        section { padding: 90px 8%; }
+        .section-header { text-align: center; margin-bottom: 60px; }
+        .section-header h2 { font-size: 36px; margin-bottom: 15px; position: relative; padding-bottom: 15px; font-weight: 700; }
+        .section-header h2::after { content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 70px; height: 4px; background: var(--main-blue); }
 
-        /* Service Cards (OEM/ODM) */
+        /* Product Display with AI Posters */
+        .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 40px; }
+        .product-card { background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.08); transition: 0.3s; border: 1px solid #eee; }
+        .product-card:hover { transform: translateY(-10px); }
+        .product-img { width: 100%; height: 400px; object-fit: cover; }
+        .product-info { padding: 30px; text-align: center; }
+        .product-info h3 { font-size: 24px; margin-bottom: 15px; color: var(--main-blue); }
+
+        /* Service Cards */
         .service-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
-        .service-card { background: var(--bg-gray); padding: 40px; border-radius: 8px; text-align: center; transition: 0.3s; }
-        .service-card:hover { background: var(--main-blue); color: #fff; transform: translateY(-5px); }
-        .service-card i { font-size: 40px; margin-bottom: 20px; color: var(--main-blue); }
-        .service-card:hover i { color: #fff; }
+        .service-card { background: var(--bg-gray); padding: 45px 30px; border-radius: 8px; text-align: center; transition: 0.3s; border-bottom: 3px solid transparent; }
+        .service-card:hover { background: #fff; border-bottom: 3px solid var(--main-blue); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+        .service-card i { font-size: 45px; margin-bottom: 25px; color: var(--main-blue); }
 
-        /* Floating WhatsApp Button */
+        /* WhatsApp Floating */
         .whatsapp-float {
-            position: fixed; bottom: 30px; right: 30px; background: #25d366; color: #fff;
-            width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
-            font-size: 32px; box-shadow: 0 4px 15px rgba(0,0,0,0.3); z-index: 9999; text-decoration: none;
-            transition: all 0.3s ease;
+            position: fixed; bottom: 40px; right: 40px; background: #25d366; color: #fff;
+            width: 65px; height: 65px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+            font-size: 35px; box-shadow: 0 5px 20px rgba(0,0,0,0.3); z-index: 9999; text-decoration: none;
+            transition: 0.3s;
         }
-        .whatsapp-float:hover { transform: scale(1.1); box-shadow: 0 6px 20px rgba(0,0,0,0.4); }
+        .whatsapp-float:hover { transform: scale(1.1) rotate(10deg); }
 
-        /* Product Categories */
-        .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-        .product-item { background: #fff; border: 1px solid #eee; border-radius: 8px; overflow: hidden; transition: 0.3s; }
-        .product-item img { width: 100%; height: 250px; object-fit: cover; }
-        .product-info { padding: 20px; text-align: center; }
-
-        /* Contact Section */
-        .contact-area { display: flex; gap: 50px; background: var(--bg-gray); padding: 50px; border-radius: 12px; }
+        /* Contact Area */
+        .contact-area { display: flex; gap: 60px; background: var(--bg-gray); padding: 60px; border-radius: 15px; }
         .contact-info { flex: 1; }
-        .contact-form { flex: 1.5; background: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
-        .contact-form input, .contact-form textarea { width: 100%; padding: 12px; margin-bottom: 15px; border: 1px solid #ddd; border-radius: 4px; }
+        .contact-info h3 { font-size: 28px; margin-bottom: 25px; }
+        .contact-form { flex: 1.5; background: #fff; padding: 40px; border-radius: 10px; box-shadow: 0 5px 25px rgba(0,0,0,0.05); }
+        .contact-form input, .contact-form textarea { width: 100%; padding: 15px; margin-bottom: 20px; border: 1px solid #ddd; border-radius: 6px; font-size: 16px; }
 
-        /* Footer */
-        footer { background: #333; color: #fff; padding: 60px 8%; display: flex; justify-content: space-between; flex-wrap: wrap; border-top: 5px solid var(--main-blue); }
-        .footer-col { min-width: 250px; margin-bottom: 30px; }
-        .footer-col h4 { margin-bottom: 20px; color: #fff; }
-        .footer-col p, .footer-col a { color: #bbb; text-decoration: none; display: block; margin-bottom: 10px; }
+        /* Footer with White Logo */
+        footer { background: #222; color: #fff; padding: 70px 8%; display: flex; justify-content: space-between; flex-wrap: wrap; border-top: 6px solid var(--main-blue); }
+        .footer-logo { height: 50px; margin-bottom: 25px; filter: brightness(0) invert(1); /* Forces logo to be pure white */ }
+        .footer-col { min-width: 280px; margin-bottom: 40px; }
+        .footer-col h4 { margin-bottom: 25px; color: #fff; font-size: 20px; }
+        .footer-col p, .footer-col a { color: #aaa; text-decoration: none; display: block; margin-bottom: 12px; font-size: 15px; }
+        .footer-col a:hover { color: #fff; }
 
         @media (max-width: 768px) {
-            .hero h1 { font-size: 30px; }
+            .hero h1 { font-size: 32px; }
+            .hero { height: 500px; padding: 0 5%; text-align: center; }
             .nav-links { display: none; }
-            .contact-area { flex-direction: column; }
+            .contact-area { flex-direction: column; padding: 30px; }
+            .product-img { height: 300px; }
         }
     </style>
 </head>
 <body>
 
-    <!-- REAL WHATSAPP BUTTON - Linked to 8618028737006 -->
-    <a href="https://wa.me/8618028737006" class="whatsapp-float" target="_blank" title="Contact us on WhatsApp">
+    <a href="https://wa.me/8618028737006" class="whatsapp-float" target="_blank">
         <i class="fab fa-whatsapp"></i>
     </a>
 
@@ -101,47 +108,47 @@
         <img src="https://sc01.alicdn.com/kf/Hc7d413a2205a41d79a8be13f18e2dc57U.png" alt="Rscamtom Logo" class="logo-img">
         <div class="nav-links">
             <a href="#home">Home</a>
-            <a href="#about">OEM/ODM</a>
+            <a href="#about">Service</a>
             <a href="#products">Products</a>
-            <a href="#contact">Contact Us</a>
+            <a href="#contact">Contact</a>
         </div>
     </nav>
 
     <div class="hero" id="home">
         <div class="hero-content">
-            <h1>Expert OEM/ODM Manufacturer of Smart Security Systems</h1>
-            <p>Specializing in 4K Security Cameras and Intelligent Baby Monitors. We turn your concepts into market-leading products with 10+ years of R&D expertise.</p>
-            <a href="#contact" class="btn-blue">Request a Quote</a>
+            <h1>Expert OEM/ODM Manufacturer of 4K Security Systems</h1>
+            <p>Specializing in Intelligent Solar Cameras and Baby Monitors. Empowering your brand with 10+ years of manufacturing excellence.</p>
+            <a href="#contact" class="btn-blue">Start Your Inquiry</a>
         </div>
     </div>
 
     <div class="trust-bar">
         <div class="trust-item"><i class="fas fa-shield-alt"></i>14 Months Warranty</div>
-        <div class="trust-item"><i class="fas fa-truck"></i>Fast Production (15-20 Days)</div>
-        <div class="trust-item"><i class="fas fa-certificate"></i>CE/FCC/RoHS Compliant</div>
-        <div class="trust-item"><i class="fas fa-industry"></i>80,000+ Units / Month</div>
+        <div class="trust-item"><i class="fas fa-bolt"></i>Fast Sampling (3-7 Days)</div>
+        <div class="trust-item"><i class="fas fa-certificate"></i>Global Compliance (CE/FCC)</div>
+        <div class="trust-item"><i class="fas fa-industry"></i>80,000+ Units Monthly</div>
     </div>
 
     <section id="about">
         <div class="section-header">
-            <h2>Why Partner with Rscamtom?</h2>
+            <h2>Why Choose Rscamtom?</h2>
             <p>Professional manufacturing and design services for global security brands.</p>
         </div>
         <div class="service-grid">
             <div class="service-card">
-                <i class="fas fa-drafting-compass"></i>
+                <i class="fas fa-pencil-ruler"></i>
                 <h3>Industrial Design</h3>
-                <p>Custom ID design and 3D modeling tailored to your target market's aesthetic.</p>
+                <p>Tailored ID design and 3D modeling that resonates with your target market.</p>
             </div>
             <div class="service-card">
-                <i class="fas fa-laptop-code"></i>
-                <h3>Embedded Software</h3>
-                <p>Advanced AI algorithms, cry detection, and human tracking firmware integration.</p>
+                <i class="fas fa-microchip"></i>
+                <h3>AI R&D Support</h3>
+                <p>Advanced AI algorithms, human tracking, and cry detection firmware integration.</p>
             </div>
             <div class="service-card">
-                <i class="fas fa-box-open"></i>
-                <h3>One-Stop Sourcing</h3>
-                <p>Full-process support from tooling, PCB layout to customized packaging and logistics.</p>
+                <i class="fas fa-truck-loading"></i>
+                <h3>Supply Chain</h3>
+                <p>One-stop solution from tooling, PCB layout to global logistics and customs.</p>
             </div>
         </div>
     </section>
@@ -151,18 +158,20 @@
             <h2>Core Product Line</h2>
         </div>
         <div class="product-grid">
-            <div class="product-item">
-                <img src="https://sc02.alicdn.com/kf/He07dcc51e8214c308d3a1c5a498751d3I.jpg" alt="Security Camera">
-                <div class="product-info">
-                    <h3>Smart Security Cameras</h3>
-                    <p>4K UHD, Solar Energy, AI-driven Detection</p>
-                </div>
-            </div>
-            <div class="product-item">
-                <img src="https://sc01.alicdn.com/kf/Hc66797cc5bba4c018e15b373fbf7a3007.png" alt="Baby Monitor">
+            <div class="product-card">
+                <!-- AI Generated Baby Monitor Poster -->
+                <img src="https://sc02.alicdn.com/kf/A089b85271fd948b2a3c3f23c15e0876fC.png" class="product-img" alt="Baby Monitor">
                 <div class="product-info">
                     <h3>Intelligent Baby Monitors</h3>
-                    <p>Cry Alarm, Two-Way Talk, HD Night Vision</p>
+                    <p>Crystal Clear Vision, Cry Alarm, Two-Way Talk</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <!-- AI Generated Pet/Home Camera Poster -->
+                <img src="https://sc02.alicdn.com/kf/A3eec6589745546939a5ff38554dd56d9u.png" class="product-img" alt="Security Camera">
+                <div class="product-info">
+                    <h3>Smart Home Cameras</h3>
+                    <p>AI Tracking, 4K UHD, Wide-Angle Coverage</p>
                 </div>
             </div>
         </div>
@@ -170,23 +179,22 @@
 
     <section id="contact">
         <div class="section-header">
-            <h2>Start Your Inquiry</h2>
-            <p>Our sales team will respond within 24 hours.</p>
+            <h2>Contact Us</h2>
         </div>
         <div class="contact-area">
             <div class="contact-info">
-                <h3>Contact Information</h3>
+                <h3>Get a Quick Quote</h3>
                 <div style="margin: 30px 0;">
-                    <p style="margin-bottom:15px;"><strong><i class="fas fa-envelope" style="color:var(--main-blue);"></i> Email:</strong><br>info@rscamtom.com</p>
-                    <p style="margin-bottom:15px;"><strong><i class="fab fa-whatsapp" style="color:#25d366;"></i> WhatsApp:</strong><br>+86 180-2873-7006</p>
-                    <p style="margin-bottom:15px;"><strong><i class="fas fa-map-marker-alt" style="color:var(--main-blue);"></i> Factory Address:</strong><br>Shenzhen High-Tech Zone, Guangdong, China</p>
+                    <p style="margin-bottom:20px;"><strong><i class="fas fa-envelope" style="color:var(--main-blue);"></i> Email:</strong><br>info@rscamtom.com</p>
+                    <p style="margin-bottom:20px;"><strong><i class="fab fa-whatsapp" style="color:#25d366;"></i> WhatsApp:</strong><br>+86 180-2873-7006</p>
+                    <p style="margin-bottom:20px;"><strong><i class="fas fa-map-marker-alt" style="color:var(--main-blue);"></i> Addr:</strong><br>Shangxue Tech Zone, Shenzhen, Guangdong, China</p>
                 </div>
             </div>
             <div class="contact-form">
                 <form action="#">
-                    <input type="text" placeholder="Full Name" required>
+                    <input type="text" placeholder="Your Full Name" required>
                     <input type="email" placeholder="Business Email" required>
-                    <textarea rows="5" placeholder="Tell us about your OEM/ODM requirements..."></textarea>
+                    <textarea rows="5" placeholder="Project details (MOQ, Target Market, Specs...)"></textarea>
                     <button type="submit" class="btn-blue" style="border:none; width:100%; cursor:pointer;">Send Message</button>
                 </form>
             </div>
@@ -195,7 +203,8 @@
 
     <footer>
         <div class="footer-col">
-            <img src="https://sc01.alicdn.com/kf/Hc7d413a2205a41d79a8be13f18e2dc57U.png" alt="Rscamtom" style="height:45px; margin-bottom:20px;">
+            <!-- White Logo applied here -->
+            <img src="https://sc01.alicdn.com/kf/Hc7d413a2205a41d79a8be13f18e2dc57U.png" alt="Rscamtom" class="footer-logo">
             <p>Your premier manufacturing partner for world-class security devices.</p>
         </div>
         <div class="footer-col">
@@ -206,10 +215,10 @@
             <a href="#products">Baby Monitors</a>
         </div>
         <div class="footer-col">
-            <h4>Contact Details</h4>
+            <h4>Quick Contact</h4>
             <p>Email: info@rscamtom.com</p>
             <p>WhatsApp: +86 180-2873-7006</p>
-            <p>Working Hours: Mon-Fri, 9AM - 6PM</p>
+            <p>Mon - Fri: 9:00 - 18:00</p>
         </div>
     </footer>
 
