@@ -8,12 +8,12 @@
     <style>
         /* Base Styles & CSS Variables */
         :root {
-            --primary-color: #007AFF; /* Tech Blue */
+            --primary-color: #007AFF; 
             --bg-dark: #0a0a0b;
             --bg-card: #161618;
             --text-light: #f5f5f7;
+            --text-dark: #1d1d1f; /* Added dark text color */
             --text-gray: #86868b;
-            --accent-color: #00f2fe;
         }
 
         * {
@@ -30,30 +30,25 @@
             overflow-x: hidden;
         }
 
-        /* Navigation */
+        /* Navigation - Changed to White Background */
         nav {
             position: fixed;
             top: 0;
             width: 100%;
-            background: rgba(10, 10, 11, 0.8);
+            background: rgba(255, 255, 255, 0.95); /* White glass effect */
             backdrop-filter: blur(20px);
             z-index: 1000;
             padding: 1rem 5%;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
+            border-bottom: 1px solid rgba(0,0,0,0.1);
         }
 
         .logo-img {
-            height: 40px; /* Logo高度设置 */
+            height: 40px;
             width: auto;
             display: block;
-            transition: opacity 0.3s;
-        }
-        
-        .logo-img:hover {
-            opacity: 0.8;
         }
 
         .nav-links {
@@ -63,7 +58,7 @@
 
         .nav-links a {
             text-decoration: none;
-            color: var(--text-light);
+            color: var(--text-dark); /* Dark text for white background */
             font-weight: 500;
             font-size: 0.95rem;
             transition: color 0.3s;
@@ -84,6 +79,7 @@
             padding: 0 10%;
             background: radial-gradient(circle at center, #1a1a1a 0%, #000 100%);
             position: relative;
+            margin-top: 60px; /* Offset for sticky nav */
         }
 
         .hero::after {
@@ -127,30 +123,6 @@
             box-shadow: 0 10px 30px rgba(0, 122, 255, 0.3);
         }
 
-        .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 40px rgba(0, 122, 255, 0.5);
-        }
-
-        /* Sections Styling */
-        section {
-            padding: 100px 10%;
-        }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 60px;
-        }
-
-        .section-title h2 {
-            font-size: 2.5rem;
-            margin-bottom: 15px;
-        }
-
-        .section-title p {
-            color: var(--text-gray);
-        }
-
         /* Product Cards */
         .product-grid {
             display: grid;
@@ -167,71 +139,37 @@
             text-align: center;
         }
 
-        .product-card:hover {
-            transform: translateY(-10px);
-            border-color: var(--primary-color);
-        }
-
         .product-card i {
             font-size: 3rem;
             color: var(--primary-color);
             margin-bottom: 25px;
         }
 
-        .product-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 15px;
-        }
-
         /* Services Section */
-        .service-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 40px;
-        }
+        section { padding: 100px 10%; }
+        .section-title { text-align: center; margin-bottom: 60px; }
 
-        .service-item {
-            text-align: left;
-        }
-
-        .service-item h4 {
-            color: var(--primary-color);
-            margin-bottom: 10px;
-            font-size: 1.2rem;
-        }
-
-        /* Form Section */
-        .contact-container {
-            max-width: 800px;
-            margin: 0 auto;
-            background: var(--bg-card);
-            padding: 50px;
-            border-radius: 30px;
-        }
-
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        input, textarea {
-            width: 100%;
-            padding: 15px;
-            background: #252529;
-            border: 1px solid rgba(255,255,255,0.1);
-            border-radius: 12px;
-            color: white;
-            outline: none;
-        }
-
-        /* Footer */
+        /* Footer - Changed to White Background */
         footer {
             padding: 60px 10%;
-            border-top: 1px solid rgba(255,255,255,0.1);
+            background: #ffffff;
+            border-top: 1px solid rgba(0,0,0,0.05);
             display: flex;
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
             gap: 20px;
+            color: var(--text-dark);
+        }
+
+        footer .copyright {
+            color: var(--text-gray);
+        }
+
+        .social-links a {
+            color: var(--text-dark);
+            margin-left: 15px;
+            font-size: 1.2rem;
         }
 
         @media (max-width: 768px) {
@@ -253,12 +191,12 @@
             <a href="#services">Services</a>
             <a href="#contact">Contact</a>
         </div>
-        <a href="#contact" class="btn btn-primary" style="padding: 0.6rem 1.5rem;">Inquiry</a>
+        <a href="#contact" class="btn btn-primary" style="padding: 0.6rem 1.5rem; font-size: 0.85rem;">Inquiry</a>
     </nav>
 
     <div class="hero" id="home">
         <h1>Your Vision, Our Tech.</h1>
-        <p>Professional OEM/ODM manufacturer of 4K Security Cameras and Intelligent Baby Monitors. High-definition, AI-driven, and reliable solutions for a safer world.</p>
+        <p>Professional OEM/ODM manufacturer of 4K Security Cameras and Intelligent Baby Monitors. High-definition, AI-driven, and reliable solutions.</p>
         <a href="#products" class="btn btn-primary">Explore Products</a>
     </div>
 
@@ -271,7 +209,7 @@
             <div class="product-card">
                 <i class="fas fa-video"></i>
                 <h3>Smart Security Cameras</h3>
-                <p>4K Ultra HD, Solar-Powered, Dual-Lens Vision, and AI Human Detection for total coverage.</p>
+                <p>4K Ultra HD, Solar-Powered, Dual-Lens Vision, and AI Human Detection.</p>
             </div>
             <div class="product-card">
                 <i class="fas fa-baby"></i>
@@ -286,21 +224,21 @@
             <h2>Why Choose Rscamtom?</h2>
             <p>10+ years of manufacturing excellence in Shenzhen.</p>
         </div>
-        <div class="service-grid">
+        <div class="service-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px;">
             <div class="service-item">
-                <h4>R&D Excellence</h4>
+                <h4 style="color:var(--primary-color); margin-bottom:10px;">R&D Excellence</h4>
                 <p>Dedicated team for optical imaging and AI algorithms.</p>
             </div>
             <div class="service-item">
-                <h4>Global Compliance</h4>
+                <h4 style="color:var(--primary-color); margin-bottom:10px;">Global Compliance</h4>
                 <p>Certified by CE, FCC, RoHS, and KC for international markets.</p>
             </div>
             <div class="service-item">
-                <h4>Customization</h4>
+                <h4 style="color:var(--primary-color); margin-bottom:10px;">Customization</h4>
                 <p>Full OEM/ODM service from ID design to PCB layout.</p>
             </div>
             <div class="service-item">
-                <h4>Fast Delivery</h4>
+                <h4 style="color:var(--primary-color); margin-bottom:10px;">Fast Delivery</h4>
                 <p>Rapid 3-7 day sampling and efficient bulk production.</p>
             </div>
         </div>
@@ -311,16 +249,16 @@
             <h2>Get In Touch</h2>
             <p>Ready to start your next project? Our experts are here to help.</p>
         </div>
-        <div class="contact-container">
+        <div style="max-width: 800px; margin: 0 auto; background: var(--bg-card); padding: 50px; border-radius: 30px;">
             <form action="#">
-                <div class="form-group">
-                    <input type="text" placeholder="Your Name" required>
+                <div style="margin-bottom: 20px;">
+                    <input type="text" placeholder="Your Name" style="width: 100%; padding: 15px; background: #252529; border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; color: white;" required>
                 </div>
-                <div class="form-group">
-                    <input type="email" placeholder="Email Address" required>
+                <div style="margin-bottom: 20px;">
+                    <input type="email" placeholder="Email Address" style="width: 100%; padding: 15px; background: #252529; border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; color: white;" required>
                 </div>
-                <div class="form-group">
-                    <textarea rows="5" placeholder="Your Message / Requirement"></textarea>
+                <div style="margin-bottom: 20px;">
+                    <textarea rows="5" placeholder="Your Message / Requirement" style="width: 100%; padding: 15px; background: #252529; border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; color: white;"></textarea>
                 </div>
                 <button type="submit" class="btn btn-primary" style="width:100%; border:none;">Send Message</button>
             </form>
@@ -328,11 +266,11 @@
     </section>
 
     <footer>
-        <img src="https://sc01.alicdn.com/kf/Hc7d413a2205a41d79a8be13f18e2dc57U.png" alt="Rscamtom Logo" class="logo-img" style="height: 30px;">
-        <div style="color: var(--text-gray);">© 2026 Rscamtom Technology. All Rights Reserved.</div>
+        <img src="https://sc01.alicdn.com/kf/Hc7d413a2205a41d79a8be13f18e2dc57U.png" alt="Rscamtom Logo" class="logo-img" style="height: 35px;">
+        <div class="copyright">© 2026 Rscamtom Technology. All Rights Reserved.</div>
         <div class="social-links">
-            <a href="#" style="color:white; margin-left:15px;"><i class="fab fa-linkedin"></i></a>
-            <a href="#" style="color:white; margin-left:15px;"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
         </div>
     </footer>
 
