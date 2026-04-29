@@ -10,12 +10,12 @@
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; scroll-behavior: smooth; }
         body { color: #333; line-height: 1.6; overflow-x: hidden; background: #fff; }
 
-        /* 1. TOP LANGUAGE BAR */
+        /* 1. TOP BAR */
         .top-lang-bar { background: #000; color: #fff; padding: 10px 8%; display: flex; justify-content: flex-end; gap: 15px; font-size: 11px; z-index: 1001; position: relative; }
         .lang-item { cursor: pointer; opacity: 0.6; transition: 0.3s; font-weight: 700; text-transform: uppercase; }
-        .lang-item:hover, .lang-item.active { opacity: 1; color: var(--main-blue); }
+        .lang-item.active { opacity: 1; color: var(--main-blue); }
 
-        /* 2. CAPSULE NAVIGATION */
+        /* 2. NAVIGATION */
         .nav-wrapper { position: absolute; top: 60px; width: 100%; z-index: 1000; display: flex; justify-content: center; padding: 0 20px; }
         .nav-capsule {
             background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(15px);
@@ -40,16 +40,16 @@
         /* 4. CAPACITY BAR */
         .capacity-bar { background: var(--main-blue); color: #fff; padding: 40px 5%; display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; text-align: center; }
         .cap-item h3 { font-size: 28px; font-weight: 800; margin-bottom: 5px; }
-        .cap-item p { font-size: 11px; text-transform: uppercase; letter-spacing: 1px; opacity: 0.8; }
+        .cap-item p { font-size: 11px; text-transform: uppercase; opacity: 0.8; }
 
-        /* 5. PRODUCT SERIES (NEW IMAGES APPLIED) */
-        .products-section { padding: 80px 8%; background: #f8fafc; text-align: center; }
+        /* 5. PRODUCT SERIES */
+        .products-section { padding: 100px 8%; background: #f8fafc; text-align: center; }
         .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 30px; margin-top: 40px; }
         .product-card { background: #fff; border-radius: 20px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.05); transition: 0.4s; }
-        .product-card:hover { transform: translateY(-10px); }
         .product-card img { width: 100%; height: 260px; object-fit: cover; }
+        .product-card:hover { transform: translateY(-10px); }
 
-        /* 6. WHO WE ARE (VIDEO SECTION) */
+        /* 6. WHO WE ARE */
         .who-we-are { padding: 100px 8%; text-align: center; background: #fff; }
         .who-header { max-width: 850px; margin: 0 auto 30px; }
         .who-header h2 { font-size: 40px; font-weight: 800; margin-bottom: 20px; }
@@ -60,7 +60,7 @@
             height: 500px; border-radius: 25px; overflow: hidden;
             box-shadow: 0 30px 60px rgba(0,0,0,0.2); background: #000; cursor: pointer;
         }
-        .bg-video { width: 100%; height: 100%; object-fit: cover; opacity: 0.6; filter: brightness(0.8); }
+        .bg-video { width: 100%; height: 100%; object-fit: cover; opacity: 0.6; }
         .play-btn-glow { 
             position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
             width: 80px; height: 80px; background: #fff; border-radius: 50%; 
@@ -69,27 +69,24 @@
         }
         @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(255,255,255,0.4); } 70% { box-shadow: 0 0 0 20px rgba(255,255,255,0); } 100% { box-shadow: 0 0 0 0 rgba(255,255,255,0); } }
 
-        /* VIDEO MODAL PLAYER */
-        .video-modal { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.95); z-index: 20000; display: none; align-items: center; justify-content: center; }
-        .video-modal video { width: 85%; max-width: 1000px; border-radius: 15px; }
-        .close-video { position: absolute; top: 30px; right: 40px; color: #fff; font-size: 50px; cursor: pointer; }
-
         /* 7. CUSTOMERS SECTION (40/30/20/10) */
         .customers-section { padding: 100px 8%; display: flex; align-items: center; gap: 80px; background: #fff; max-width: 1300px; margin: 0 auto; }
         .cust-left { flex: 1; text-align: left; }
         .cust-left h2 { font-size: 38px; font-weight: 800; margin-bottom: 20px; }
-        .cust-right { flex: 1; background: var(--dark-navy); padding: 40px; border-radius: 25px; display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+        .cust-logo { height: 35px; opacity: 0.8; margin-bottom: 25px; }
+        .cust-right { flex: 1; background: var(--dark-navy); padding: 50px; border-radius: 30px; display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
         .cust-card { border-left: 3px solid rgba(255,255,255,0.2); padding-left: 20px; color: #fff; }
         .cust-card h3 { font-size: 42px; font-weight: 900; }
+        .cust-card p { font-size: 11px; opacity: 0.7; text-transform: uppercase; }
 
-        /* 8. CAPABILITY SECTION (REPLACED WITH HIGH-TECH IMAGE) */
-        .capability-section { padding: 100px 8%; display: flex; align-items: center; gap: 80px; background: #f8fafc; }
+        /* 8. CAPABILITY (FIXED IMAGE) */
+        .capability-section { padding: 120px 8%; display: flex; align-items: center; gap: 80px; background: #f8fafc; }
         .cap-left { flex: 1.2; }
         .cap-left img { width: 100%; border-radius: 20px; box-shadow: 0 20px 50px rgba(0,0,0,0.1); }
         .cap-right { flex: 1; text-align: left; }
         .cap-right h2 { font-size: 36px; font-weight: 800; margin-bottom: 30px; border-left: 8px solid var(--main-blue); padding-left: 20px; }
 
-        /* 9. CONTACT SECTION */
+        /* 9. CONTACT */
         .contact-section { 
             position: relative; padding: 120px 8%; 
             background: linear-gradient(rgba(0, 31, 63, 0.92), rgba(0, 31, 63, 0.92)), url('https://sc02.alicdn.com/kf/Adc3636013a954f1ba15e0f37def38b5bV.png');
@@ -98,10 +95,18 @@
         }
         .contact-container { display: flex; gap: 80px; max-width: 1200px; width: 100%; align-items: center; }
         .contact-left { flex: 1; color: #fff; text-align: left; }
+        .contact-left h2 { font-size: 52px; font-weight: 900; margin-bottom: 25px; }
         .contact-right { flex: 1.2; background: #fff; padding: 50px; border-radius: 30px; box-shadow: 0 30px 60px rgba(0,0,0,0.3); }
+        .form-input { width: 100%; padding: 15px; border: 1px solid #ddd; border-radius: 10px; margin-bottom: 15px; background: #f9f9f9; outline: none; }
+        .btn-submit { width: 100%; background: var(--main-blue); color: #fff; padding: 20px; border: none; border-radius: 10px; font-size: 18px; font-weight: 800; cursor: pointer; transition: 0.3s; }
 
+        /* MODALS (POPUP & VIDEO) */
         .popup-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 10000; display: none; align-items: center; justify-content: center; }
         .popup-card { width: 90%; max-width: 900px; background: #fff; border-radius: 25px; overflow: hidden; display: flex; position: relative; }
+        .video-modal { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); z-index: 20000; display: none; align-items: center; justify-content: center; }
+        .video-modal iframe { width: 85%; height: 75%; border-radius: 15px; box-shadow: 0 0 50px rgba(255,255,255,0.1); }
+        .close-video { position: absolute; top: 30px; right: 40px; color: #fff; font-size: 50px; cursor: pointer; }
+
         .wa-float { position: fixed; bottom: 30px; right: 30px; background: #25d366; color: #fff; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 32px; z-index: 9999; text-decoration: none; }
         footer { background: #000; color: #fff; padding: 60px 8% 30px; text-align: center; }
 
@@ -118,9 +123,7 @@
     <!-- VIDEO MODAL PLAYER -->
     <div class="video-modal" id="videoModal">
         <span class="close-video" onclick="closeVideo()">&times;</span>
-        <video id="player" controls>
-            <source src="https://assets.mixkit.co/videos/preview/mixkit-circuit-board-details-and-components-close-up-34533-large.mp4" type="video/mp4">
-        </video>
+        <iframe id="videoIframe" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
     </div>
 
     <a href="https://wa.me/8618028737006" class="wa-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
@@ -180,33 +183,31 @@
         <div class="cap-item"><h3>CE/FCC/RoHS</h3><p data-i18n="cap-4">Certified</p></div>
     </div>
 
-    <!-- WHO WE ARE (VIDEO FIXED) -->
+    <!-- WHO WE ARE -->
     <section class="who-we-are" id="about">
         <div class="who-header">
             <h2 data-i18n="who-title">Who We Are</h2>
-            <p data-i18n="who-desc">Rscamtom is a high-tech manufacturer specializing in AI security solutions and smart monitoring systems.</p>
+            <p data-i18n="who-desc">Rscamtom is a high-tech manufacturer specializing in AI security solutions and monitoring systems.</p>
             <a href="#contact" class="btn-view-more" data-i18n="view-more">View More</a>
         </div>
-        <div class="video-wrapper" onclick="openVideo()">
+        <div class="video-wrapper" onclick="openVideo('https://www.youtube.com/embed/dQw4w9WgXcQ')">
             <video class="bg-video" autoplay muted loop playsinline><source src="https://assets.mixkit.co/videos/preview/mixkit-circuit-board-details-and-components-close-up-34533-large.mp4" type="video/mp4"></video>
             <div class="video-content-overlay"><div class="play-btn-glow"><i class="fas fa-play"></i></div><p style="margin-top:20px; font-weight:700; text-transform:uppercase;">Watch Factory Tour</p></div>
         </div>
     </section>
 
-    <!-- PRODUCT SERIES (NEW PET & DASH IMAGES APPLIED) -->
+    <!-- PRODUCT SERIES -->
     <section class="products-section" id="products">
         <h2 style="font-size:36px; font-weight:800; margin-bottom:50px;" data-i18n="prod-title">Professional Product Series</h2>
         <div class="product-grid">
             <div class="product-card"><img src="https://sc02.alicdn.com/kf/A640a5f404bc242b2b818cab8c6759c4eQ.png"><div style="padding:20px;"><h3 data-i18n="cat-1">Solar Security</h3></div></div>
             <div class="product-card"><img src="https://sc02.alicdn.com/kf/Aa765a8e7a5b94377a3d0ba2eda83870f2.png"><div style="padding:20px;"><h3 data-i18n="cat-2">Baby Monitors</h3></div></div>
-            <!-- 使用新生成的宠物相机+屏幕图 -->
             <div class="product-card"><img src="https://sc02.alicdn.com/kf/A4eadfcdab82545e1af83029617f07aa2x.png"><div style="padding:20px;"><h3 data-i18n="cat-3">Pet Technology</h3></div></div>
-            <!-- 使用新生成的带Logo行车记录仪图 -->
-            <div class="product-card"><img src="https://sc02.alicdn.com/kf/Aea15f3425a8e4e53b78f8210f9ef5cbfM.png"><div style="padding:20px;"><h3 data-i18n="cat-4">Dash Camera</h3></div></div>
+            <div class="product-card"><img src="https://sc02.alicdn.com/kf/A41499557a5b341fbb8398e13f18e2dc5y.png"><div style="padding:20px;"><h3 data-i18n="cat-4">Dash Camera</h3></div></div>
         </div>
     </section>
 
-    <!-- CUSTOMERS SECTION -->
+    <!-- CUSTOMERS SECTION (40/30/20/10) -->
     <section class="customers-section">
         <div class="cust-left">
             <img src="https://sc01.alicdn.com/kf/Hc7d413a2205a41d79a8be13f18e2dc57U.png" class="cust-logo">
@@ -221,13 +222,19 @@
         </div>
     </section>
 
-    <!-- CAPABILITY (REPLACED WITH YOUR FAVORITE TECH IMAGE) -->
+    <!-- CAPABILITY (FIXED WITH FACTORY LINE IMAGE) -->
     <section class="capability-section">
-        <div class="cap-left"><img src="https://sc01.alicdn.com/kf/H80a080f4ee7442cb9cdba6a48b3bf65ew.png" alt="Rscamtom R&D Lab"></div>
+        <div class="cap-left"><img src="https://sc01.alicdn.com/kf/H10bdc2214d384d1fb8081cafa4c3c61fd.png" alt="Rscamtom Factory Line"></div>
         <div class="cap-right">
             <h2 data-i18n="cap-title">Advanced Manufacturing</h2>
-            <div style="margin-bottom:30px;"><h4 style="font-size:22px; color:var(--main-blue); margin-bottom:10px;">Electronic Engineering</h4><p>Full-cycle development from PCB layout to AI firmware optimization.</p></div>
-            <div><h4 style="font-size:22px; color:var(--main-blue); margin-bottom:10px;">Mass Production</h4><p>Scale with confidence: 200,000+ units monthly capacity with zero-defect QA.</p></div>
+            <div style="margin-bottom:30px;">
+                <h4 style="font-size:22px; color:var(--main-blue); margin-bottom:10px;" data-i18n="rd-1">Electronic Engineering</h4>
+                <p data-i18n="rd-1-d">Full-cycle development from PCB layout to AI firmware optimization.</p>
+            </div>
+            <div>
+                <h4 style="font-size:22px; color:var(--main-blue); margin-bottom:10px;" data-i18n="rd-2">Mass Production</h4>
+                <p data-i18n="rd-2-d">200,000+ units monthly capacity with zero-defect QA systems.</p>
+            </div>
         </div>
     </section>
 
@@ -241,9 +248,9 @@
             <div class="contact-right">
                 <h3 style="font-size:32px; font-weight:800; margin-bottom:30px;" data-i18n="quote-title">Get a Free Quote</h3>
                 <form>
-                    <input type="text" style="width:100%; padding:15px; border:1px solid #ddd; border-radius:10px; margin-bottom:15px;" placeholder="Name" required>
-                    <input type="email" style="width:100%; padding:15px; border:1px solid #ddd; border-radius:10px; margin-bottom:15px;" placeholder="Email" required>
-                    <button type="submit" style="width:100%; background:var(--main-blue); color:#fff; padding:20px; border:none; border-radius:10px; font-weight:800;" data-i18n="btn-send">SEND INQUIRY NOW</button>
+                    <input type="text" class="form-input" placeholder="Name" required>
+                    <input type="email" class="form-input" placeholder="Email" required>
+                    <button type="submit" class="btn-submit" data-i18n="btn-send">SEND INQUIRY NOW</button>
                 </form>
             </div>
         </div>
@@ -253,8 +260,9 @@
 
     <script>
         const i18n = {
-            en: { "nav-home": "Home", "nav-about": "About", "nav-products": "Products", "nav-contact": "Contact", "hero-1": "Advanced 4K Solar Security Cameras", "hero-2": "Smart AI Baby Monitors", "who-title": "Who We Are", "who-desc": "Rscamtom is a high-tech manufacturer specializing in AI security solutions.", "view-more": "View More", "quote-title": "Get a Free Quote", "btn-send": "SEND INQUIRY NOW", "pop-title": "Download Free Catalog", "pop-btn": "DOWNLOAD NOW", "prod-title": "Professional Product Series", "cat-1": "Solar Security", "cat-2": "Baby Monitors", "cat-3": "Pet Technology", "cat-4": "Dash Camera", "cust-title": "Global Partners", "cust-desc": "We partner with top-tier retailers worldwide.", "cap-title": "Advanced Manufacturing", "con-title": "Contact Us", "con-sub": "Professional OEM/ODM Service for Global Brands." },
-            de: { "nav-home": "Heim", "nav-about": "Über uns", "nav-products": "Produkte", "nav-contact": "Kontakt", "hero-1": "Fortschrittliche 4K-Solar-Sicherheitskameras", "hero-2": "Intelligente KI-Babyphone", "who-title": "Wer wir sind", "view-more": "Mehr sehen", "quote-title": "Kostenloses Angebot", "btn-send": "ANFRAGE SENDEN" }
+            en: { "nav-home": "Home", "nav-about": "About", "nav-products": "Products", "nav-contact": "Contact", "hero-1": "Advanced 4K Solar Security Cameras", "hero-2": "Smart AI Baby Monitors", "who-title": "Who We Are", "who-desc": "Rscamtom is a high-tech manufacturer specializing in AI security solutions.", "view-more": "View More", "quote-title": "Get a Free Quote", "btn-send": "SEND INQUIRY NOW", "pop-title": "Download Free Catalog", "pop-btn": "DOWNLOAD NOW", "cap-1": "Monthly Capacity", "cap-2": "Experience", "cap-3": "Sampling", "cap-4": "Certified", "prod-title": "Professional Product Series", "cat-1": "Solar Security", "cat-2": "Baby Monitors", "cat-3": "Pet Technology", "cat-4": "Dash Camera", "cust-title": "Global Partners", "cust-desc": "We partner with top-tier retailers worldwide.", "cap-title": "Advanced Manufacturing", "rd-1": "Electronic Engineering", "rd-1-d": "In-house PCB layout and firmware optimization.", "rd-2": "Mass Production", "rd-2-d": "200,000+ units monthly output with 100% QA.", "con-title": "Get In Touch", "con-sub": "Professional OEM/ODM Service for Global Brands." },
+            de: { "nav-home": "Heim", "nav-about": "Über uns", "nav-products": "Produkte", "nav-contact": "Kontakt", "hero-1": "Fortschrittliche 4K-Solar-Sicherheitskameras", "hero-2": "Intelligente KI-Babyphone", "who-title": "Wer wir sind", "view-more": "Mehr sehen", "quote-title": "Kostenloses Angebot", "btn-send": "ANFRAGE SENDEN" },
+            jp: { "nav-home": "ホーム", "nav-about": "会社概要", "nav-products": "製品", "nav-contact": "お問い合わせ", "hero-1": "高度な4Kソーラー防犯カメラ", "hero-2": "スマートAIベビーモニター", "who-title": "会社概要", "view-more": "もっと見る", "quote-title": "無料お見積り", "btn-send": "今すぐ送信" }
         };
 
         function translatePage(lang, btn) {
@@ -267,18 +275,13 @@
             });
         }
 
-        function openVideo() {
-            const modal = document.getElementById('videoModal');
-            const video = document.getElementById('player');
-            modal.style.display = 'flex';
-            video.play();
+        function openVideo(url) {
+            document.getElementById('videoModal').style.display = 'flex';
+            document.getElementById('videoIframe').src = url + "?autoplay=1";
         }
         function closeVideo() {
-            const modal = document.getElementById('videoModal');
-            const video = document.getElementById('player');
-            modal.style.display = 'none';
-            video.pause();
-            video.currentTime = 0;
+            document.getElementById('videoModal').style.display = 'none';
+            document.getElementById('videoIframe').src = "";
         }
 
         let cur = 0; setInterval(() => { cur = (cur + 1) % 2; document.getElementById('slider').style.transform = `translateX(-${cur * 50}%)`; }, 5000);
