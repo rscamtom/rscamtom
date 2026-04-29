@@ -46,9 +46,10 @@
         .products-section { padding: 80px 8%; background: #f8fafc; text-align: center; }
         .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 30px; margin-top: 40px; }
         .product-card { background: #fff; border-radius: 20px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.05); transition: 0.4s; }
+        .product-card:hover { transform: translateY(-10px); }
         .product-card img { width: 100%; height: 260px; object-fit: cover; }
 
-        /* 6. WHO WE ARE (VIDEO SECTION) */
+        /* 6. WHO WE ARE (VIDEO & STATS) */
         .who-we-are { padding: 100px 8%; text-align: center; background: #fff; }
         .who-header { max-width: 850px; margin: 0 auto 30px; }
         .who-header h2 { font-size: 40px; font-weight: 800; margin-bottom: 20px; }
@@ -73,7 +74,7 @@
         .stat-box h3 { font-size: 28px; color: var(--main-blue); font-weight: 800; }
         .stat-box p { font-size: 10px; color: #999; text-transform: uppercase; font-weight: 700; }
 
-        /* 7. CUSTOMERS SECTION */
+        /* 7. CUSTOMERS SECTION (40/30/20/10) */
         .customers-section { padding: 100px 8%; display: flex; align-items: center; gap: 80px; background: #fff; max-width: 1300px; margin: 0 auto; }
         .cust-left { flex: 1; text-align: left; }
         .cust-left h2 { font-size: 38px; font-weight: 800; margin-bottom: 20px; }
@@ -83,7 +84,7 @@
         .cust-card h3 { font-size: 42px; font-weight: 900; }
         .cust-card p { font-size: 11px; opacity: 0.7; text-transform: uppercase; }
 
-        /* 8. CAPABILITY SECTION (R&D) - FIXED IMAGE HERE */
+        /* 8. CAPABILITY SECTION (R&D) */
         .capability-section { padding: 100px 8%; display: flex; align-items: center; gap: 80px; background: #f8fafc; }
         .cap-left { flex: 1.2; }
         .cap-left img { width: 100%; border-radius: 20px; box-shadow: 0 20px 50px rgba(0,0,0,0.1); }
@@ -102,6 +103,8 @@
         .contact-container { display: flex; gap: 80px; max-width: 1200px; width: 100%; align-items: center; }
         .contact-left { flex: 1; color: #fff; text-align: left; }
         .contact-right { flex: 1.2; background: #fff; padding: 50px; border-radius: 30px; box-shadow: 0 30px 60px rgba(0,0,0,0.3); }
+        .select-box { border: 1px solid #ddd; padding: 10px; border-radius: 10px; text-align: center; cursor: pointer; font-size: 11px; background: #fcfcfc; }
+        .select-box.active { border-color: var(--main-blue); background: var(--light-blue); color: var(--main-blue); font-weight: 700; }
 
         /* 10. POPUP & VIDEO MODAL */
         .popup-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 10000; display: none; align-items: center; justify-content: center; }
@@ -193,7 +196,7 @@
     <section class="who-we-are" id="about">
         <div class="who-header">
             <h2 data-i18n="who-title">Who We Are</h2>
-            <p data-i18n="who-desc">Rscamtom is a high-tech manufacturer specializing in AI security solutions.</p>
+            <p data-i18n="who-desc">Rscamtom is a high-tech manufacturer specializing in AI security solutions and baby monitors.</p>
             <a href="#contact" class="btn-view-more" data-i18n="view-more">View More</a>
         </div>
         <div class="video-wrapper" onclick="openVideo('https://www.youtube.com/embed/dQw4w9WgXcQ')">
@@ -214,8 +217,8 @@
         <div class="product-grid">
             <div class="product-card"><img src="https://sc02.alicdn.com/kf/A640a5f404bc242b2b818cab8c6759c4eQ.png"><div style="padding:20px;"><h3 data-i18n="cat-1">Solar Security</h3></div></div>
             <div class="product-card"><img src="https://sc02.alicdn.com/kf/Aa765a8e7a5b94377a3d0ba2eda83870f2.png"><div style="padding:20px;"><h3 data-i18n="cat-2">Baby Monitors</h3></div></div>
-            <div class="product-card"><img src="https://sc04.alicdn.com/kf/H7847d72d395034c18b8ffb3f57442f062j.jpg"><div style="padding:20px;"><h3 data-i18n="cat-3">Pet Technology</h3></div></div>
-            <div class="product-card"><img src="https://sc04.alicdn.com/kf/Sa06a7289b3874a9eb339eaf33dd41e79n.jpg"><div style="padding:20px;"><h3 data-i18n="cat-4">Dash Camera</h3></div></div>
+            <div class="product-card"><img src="https://sc02.alicdn.com/kf/A43f733157e8a4a58b85b46e890f5c120i.png"><div style="padding:20px;"><h3 data-i18n="cat-3">Pet Technology</h3></div></div>
+            <div class="product-card"><img src="https://sc02.alicdn.com/kf/A20245a44046c4309a455a5b131805da5y.png"><div style="padding:20px;"><h3 data-i18n="cat-4">Dash Camera</h3></div></div>
         </div>
     </section>
 
@@ -234,12 +237,9 @@
         </div>
     </section>
 
-    <!-- CAPABILITY (FIXED WITH YOUR PROVIDED IMAGE) -->
+    <!-- CAPABILITY -->
     <section class="capability-section">
-        <div class="cap-left">
-            <!-- 这里使用了您提供的那个稳定且高端的内部构造图 -->
-            <img src="https://sc01.alicdn.com/kf/H80a080f4ee7442cb9cdba6a48b3bf65ew.png" alt="R&D Capability">
-        </div>
+        <div class="cap-left"><img src="https://sc02.alicdn.com/kf/Adc3636013a954f1ba15e0f37def38b5bV.png"></div>
         <div class="cap-right">
             <h2 data-i18n="cap-title">Bring Your Ideas to Reality</h2>
             <div class="step"><div class="step-icon"><i class="fas fa-microchip"></i></div><div><h4 data-i18n="rd-1">Electronic Engineering</h4><p data-i18n="rd-1-d">In-house PCB layout and firmware optimization.</p></div></div>
@@ -259,6 +259,9 @@
                 <form>
                     <input type="text" style="width:100%; padding:15px; border:1px solid #ddd; border-radius:10px; margin-bottom:15px;" placeholder="Name" required>
                     <input type="email" style="width:100%; padding:15px; border:1px solid #ddd; border-radius:10px; margin-bottom:15px;" placeholder="Email" required>
+                    <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:8px; margin-bottom:20px;">
+                        <div class="select-box active">Samples</div><div class="select-box">Stock</div><div class="select-box">OEM</div><div class="select-box">Project</div>
+                    </div>
                     <button type="submit" style="width:100%; background:var(--main-blue); color:#fff; padding:18px; border:none; border-radius:10px; font-weight:800;" data-i18n="btn-send">SEND INQUIRY NOW</button>
                 </form>
             </div>
@@ -270,7 +273,8 @@
     <script>
         const i18n = {
             en: { "nav-home": "Home", "nav-about": "About", "nav-products": "Products", "nav-contact": "Contact", "hero-1": "Advanced 4K Solar Security Cameras", "hero-2": "Smart AI Baby Monitors", "who-title": "Who We Are", "who-desc": "Rscamtom is a high-tech manufacturer specializing in AI security solutions.", "view-more": "View More", "quote-title": "Get a Free Quote", "btn-send": "SEND INQUIRY NOW", "pop-title": "Download Free Catalog", "pop-btn": "DOWNLOAD NOW", "cap-1": "Monthly Capacity", "cap-2": "Experience", "cap-3": "Sampling", "cap-4": "Certified", "stat-1": "Years Experience", "stat-2": "Monthly Units", "stat-3": "Countries Served", "stat-4": "R&D Team", "prod-title": "Professional Product Series", "cat-1": "Solar Security", "cat-2": "Baby Monitors", "cat-3": "Pet Technology", "cat-4": "Dash Camera", "cust-title": "Customers Who Work with Rscamtom", "cust-desc": "We partner with top-tier retailers and distributors worldwide.", "cap-title": "Bring Your Ideas to Reality", "rd-1": "Electronic Engineering", "rd-1-d": "In-house PCB layout and firmware optimization.", "rd-2": "Mass Production", "rd-2-d": "200,000+ units monthly output with 100% QA.", "con-title": "Get In Touch", "con-sub": "Whether You're Sourcing 50 Units or 50,000 — Let's Talk." },
-            de: { "nav-home": "Heim", "nav-about": "Über uns", "nav-products": "Produkte", "nav-contact": "Kontakt", "hero-1": "Fortschrittliche 4K-Solar-Sicherheitskameras", "hero-2": "Intelligente KI-Babyphone", "who-title": "Wer wir sind", "who-desc": "Rscamtom ist ein High-Tech-Hersteller, der sich auf KI-Sicherheitslösungen spezialisiert hat.", "view-more": "Mehr sehen", "quote-title": "Kostenloses Angebot", "btn-send": "ANFRAGE JETZT SENDEN" }
+            de: { "nav-home": "Heim", "nav-about": "Über uns", "nav-products": "Produkte", "nav-contact": "Kontakt", "hero-1": "Fortschrittliche 4K-Solar-Sicherheitskameras", "hero-2": "Intelligente KI-Babyphone", "who-title": "Wer wir sind", "who-desc": "Rscamtom ist ein High-Tech-Hersteller, der sich auf KI-Sicherheitslösungen spezialisiert hat.", "view-more": "Mehr sehen", "quote-title": "Kostenloses Angebot", "btn-send": "ANFRAGE JETZT SENDEN", "pop-title": "Katalog herunterladen", "pop-btn": "JETZT HERUNTERLADEN", "cap-1": "Monatliche Kapazität", "cap-2": "Erfahrung", "cap-3": "Probenahme", "cap-4": "Zertifiziert" },
+            jp: { "nav-home": "ホーム", "nav-about": "会社概要", "nav-products": "製品", "nav-contact": "お問い合わせ", "hero-1": "高度な4Kソーラー防犯カメラ", "hero-2": "スマートAIベビーモニター", "who-title": "会社概要", "who-desc": "RscamtomはAIセキュリティソリューションを専門とするハイテクメーカーです。", "view-more": "もっと見る", "quote-title": "無料お見積り", "btn-send": "今すぐ送信" }
         };
 
         function translatePage(lang, btn) {
@@ -288,6 +292,7 @@
         let cur = 0; setInterval(() => { cur = (cur + 1) % 2; document.getElementById('slider').style.transform = `translateX(-${cur * 50}%)`; }, 5000);
         setTimeout(() => { document.getElementById('popup').style.display = 'flex'; }, 5000);
         function closePopup() { document.getElementById('popup').style.display = 'none'; }
+        document.querySelectorAll('.select-box').forEach(box => { box.addEventListener('click', function() { this.parentElement.querySelectorAll('.select-box').forEach(b => b.classList.remove('active')); this.classList.add('active'); }); });
     </script>
 </body>
 </html>
