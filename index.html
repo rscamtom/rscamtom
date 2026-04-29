@@ -44,229 +44,190 @@
 
         /* 5. PRODUCT SERIES */
         .products-section { padding: 80px 8%; background: #f8fafc; text-align: center; }
-        .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-top: 50px; }
+        .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 30px; margin-top: 40px; }
         .product-card { background: #fff; border-radius: 20px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.05); transition: 0.4s; }
         .product-card:hover { transform: translateY(-10px); }
         .product-card img { width: 100%; height: 260px; object-fit: cover; }
-        .product-info { padding: 25px; }
-        .product-info h3 { font-size: 20px; color: var(--main-blue); margin-bottom: 10px; }
 
-        /* 6. WHO WE ARE (HIGH-TECH VIDEO UPGRADE) */
+        /* 6. WHO WE ARE (VIDEO & STATS) */
         .who-we-are { padding: 100px 8%; text-align: center; background: #fff; }
         .who-header { max-width: 850px; margin: 0 auto 30px; }
-        .who-header h2 { font-size: 42px; font-weight: 800; margin-bottom: 20px; }
-        .btn-view-more { display: inline-block; padding: 15px 40px; background: var(--main-blue); color: #fff; text-decoration: none; border-radius: 5px; font-weight: 700; text-transform: uppercase; font-size: 14px; margin-bottom: 50px; transition: 0.3s; }
-        .btn-view-more:hover { background: #004494; transform: translateY(-3px); }
-
+        .who-header h2 { font-size: 40px; font-weight: 800; margin-bottom: 20px; }
+        .btn-view-more { display: inline-block; padding: 14px 40px; background: var(--main-blue); color: #fff; text-decoration: none; border-radius: 4px; font-weight: 700; text-transform: uppercase; font-size: 13px; margin-bottom: 50px; }
+        
         .video-wrapper { 
             position: relative; width: 100%; max-width: 1050px; margin: 0 auto; 
-            height: 550px; border-radius: 30px; overflow: hidden;
-            box-shadow: 0 30px 60px rgba(0,0,0,0.2); background: #000;
+            height: 500px; border-radius: 25px; overflow: hidden;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.2); background: #000; cursor: pointer;
         }
         .bg-video { width: 100%; height: 100%; object-fit: cover; opacity: 0.6; filter: brightness(0.8); }
-        .video-content-overlay { 
-            position: absolute; top:0; left:0; width:100%; height:100%; 
-            display: flex; flex-direction: column; align-items: center; justify-content: center; color: #fff;
-            background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.5));
-        }
         .play-btn-glow { 
-            width: 90px; height: 90px; background: #fff; border-radius: 50%; 
-            display: flex; align-items: center; justify-content: center; font-size: 28px; color: var(--main-blue);
-            cursor: pointer; box-shadow: 0 0 20px rgba(255,255,255,0.4); animation: pulse 2s infinite;
+            position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+            width: 80px; height: 80px; background: #fff; border-radius: 50%; 
+            display: flex; align-items: center; justify-content: center; font-size: 24px; color: var(--main-blue);
+            animation: pulse 2s infinite; z-index: 10;
         }
         @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(255,255,255,0.4); } 70% { box-shadow: 0 0 0 20px rgba(255,255,255,0); } 100% { box-shadow: 0 0 0 0 rgba(255,255,255,0); } }
 
         .stats-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; max-width: 1050px; margin: 40px auto 0; }
-        .stat-box { padding: 30px; border-top: 1px solid #eee; text-align: center; }
-        .stat-box h3 { font-size: 30px; color: var(--main-blue); font-weight: 800; }
-        .stat-box p { font-size: 11px; color: #888; text-transform: uppercase; font-weight: 700; }
+        .stat-box { padding: 25px; border-top: 1px solid #eee; text-align: center; }
+        .stat-box h3 { font-size: 28px; color: var(--main-blue); font-weight: 800; }
+        .stat-box p { font-size: 10px; color: #999; text-transform: uppercase; font-weight: 700; }
 
-        /* 7. CUSTOMERS SECTION (COMPACT) */
-        .customers-section { padding: 100px 8%; display: flex; align-items: center; gap: 60px; background: #fff; max-width: 1300px; margin: 0 auto; }
-        .cust-left { flex: 1; }
-        .cust-left h2 { font-size: 40px; font-weight: 800; margin-bottom: 20px; }
+        /* 7. CUSTOMERS SECTION (40/30/20/10) */
+        .customers-section { padding: 100px 8%; display: flex; align-items: center; gap: 80px; background: #fff; max-width: 1300px; margin: 0 auto; }
+        .cust-left { flex: 1; text-align: left; }
+        .cust-left h2 { font-size: 38px; font-weight: 800; margin-bottom: 20px; }
         .cust-logo { height: 35px; opacity: 0.8; margin-bottom: 25px; }
-        .cust-right { flex: 1; background: var(--dark-navy); padding: 40px; border-radius: 30px; display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+        .cust-right { flex: 1; background: var(--dark-navy); padding: 40px; border-radius: 25px; display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
         .cust-card { border-left: 3px solid rgba(255,255,255,0.2); padding-left: 20px; color: #fff; }
         .cust-card h3 { font-size: 42px; font-weight: 900; }
-        .cust-card p { font-size: 11px; opacity: 0.7; }
+        .cust-card p { font-size: 11px; opacity: 0.7; text-transform: uppercase; }
 
-        /* 8. CAPABILITY (R&D) */
+        /* 8. CAPABILITY SECTION (R&D) */
         .capability-section { padding: 100px 8%; display: flex; align-items: center; gap: 80px; background: #f8fafc; }
         .cap-left { flex: 1.2; }
         .cap-left img { width: 100%; border-radius: 20px; box-shadow: 0 20px 50px rgba(0,0,0,0.1); }
-        .cap-right { flex: 1; }
-        .cap-right h2 { font-size: 38px; font-weight: 800; margin-bottom: 30px; border-left: 8px solid var(--main-blue); padding-left: 20px; }
+        .cap-right { flex: 1; text-align: left; }
+        .cap-right h2 { font-size: 36px; font-weight: 800; margin-bottom: 30px; border-left: 8px solid var(--main-blue); padding-left: 20px; }
         .step { display: flex; gap: 20px; margin-bottom: 30px; }
         .step-icon { width: 55px; height: 55px; background: var(--light-blue); color: var(--main-blue); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 22px; flex-shrink: 0; }
 
         /* 9. CONTACT SECTION */
         .contact-section { 
             position: relative; padding: 120px 8%; 
-            background: linear-gradient(rgba(0, 31, 63, 0.9), rgba(0, 31, 63, 0.9)), url('https://sc02.alicdn.com/kf/Adc3636013a954f1ba15e0f37def38b5bV.png');
+            background: linear-gradient(rgba(0, 31, 63, 0.92), rgba(0, 31, 63, 0.92)), url('https://sc02.alicdn.com/kf/Adc3636013a954f1ba15e0f37def38b5bV.png');
             background-size: cover; background-position: center; background-attachment: fixed;
             display: flex; justify-content: center;
         }
         .contact-container { display: flex; gap: 80px; max-width: 1200px; width: 100%; align-items: center; }
-        .contact-left { flex: 1; color: #fff; }
-        .contact-left h2 { font-size: 52px; font-weight: 900; margin-bottom: 25px; }
-        .contact-right { flex: 1.3; background: #fff; padding: 50px; border-radius: 30px; box-shadow: 0 30px 60px rgba(0,0,0,0.3); }
-        .select-box { border: 1px solid #ddd; padding: 12px 5px; border-radius: 12px; text-align: center; cursor: pointer; font-size: 11px; background: #fcfcfc; }
+        .contact-left { flex: 1; color: #fff; text-align: left; }
+        .contact-right { flex: 1.2; background: #fff; padding: 50px; border-radius: 30px; box-shadow: 0 30px 60px rgba(0,0,0,0.3); }
+        .select-box { border: 1px solid #ddd; padding: 10px; border-radius: 10px; text-align: center; cursor: pointer; font-size: 11px; background: #fcfcfc; }
         .select-box.active { border-color: var(--main-blue); background: var(--light-blue); color: var(--main-blue); font-weight: 700; }
 
-        .form-input { width: 100%; padding: 15px; border: 1px solid #ddd; border-radius: 10px; margin-bottom: 15px; background: #f9f9f9; outline: none; }
-        .btn-submit { width: 100%; background: var(--main-blue); color: #fff; padding: 20px; border: none; border-radius: 10px; font-size: 18px; font-weight: 800; cursor: pointer; transition: 0.3s; }
-        .btn-submit:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,86,179,0.2); }
-
-        /* 10. POPUP LEAD MAGNET */
+        /* 10. POPUP & VIDEO MODAL */
         .popup-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 10000; display: none; align-items: center; justify-content: center; }
-        .popup-card { width: 90%; max-width: 900px; background: #fff; border-radius: 25px; overflow: hidden; display: flex; position: relative; animation: fadeIn 0.5s ease; }
-        @keyframes fadeIn { from { opacity: 0; transform: scale(0.9); } to { opacity: 1; transform: scale(1); } }
+        .popup-card { width: 90%; max-width: 900px; background: #fff; border-radius: 25px; overflow: hidden; display: flex; position: relative; }
         .popup-left { flex: 1; background: #f0f4f8; display: flex; align-items: center; justify-content: center; padding: 40px; }
         .popup-left img { width: 100%; filter: drop-shadow(0 15px 30px rgba(0,0,0,0.15)); }
-        .popup-right { flex: 1.2; padding: 50px; }
-        .popup-right h2 { font-size: 32px; margin-bottom: 15px; font-weight: 800; }
-        .popup-right p { color: #666; margin-bottom: 30px; }
-        .popup-input { width: 100%; padding: 15px; border: 1px solid #ddd; border-radius: 10px; margin-bottom: 20px; outline: none; }
-        .popup-btn { width: 100%; background: var(--main-blue); color: #fff; padding: 18px; border: none; border-radius: 10px; font-weight: 800; font-size: 16px; cursor: pointer; }
-        .close-popup { position: absolute; top: 20px; right: 25px; font-size: 30px; cursor: pointer; color: #999; }
 
-        .wa-float { position: fixed; bottom: 30px; right: 30px; background: #25d366; color: #fff; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 32px; z-index: 9999; box-shadow: 0 10px 30px rgba(0,0,0,0.2); text-decoration: none; }
+        .video-modal { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); z-index: 20000; display: none; align-items: center; justify-content: center; }
+        .video-modal iframe { width: 85%; height: 70%; border-radius: 15px; }
+
+        .wa-float { position: fixed; bottom: 30px; right: 30px; background: #25d366; color: #fff; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 32px; z-index: 9999; text-decoration: none; }
         footer { background: #000; color: #fff; padding: 60px 8% 30px; text-align: center; }
-        .f-logo { height: 32px; filter: brightness(0) invert(1); margin-bottom: 20px; }
 
         @media (max-width: 1024px) {
             .nav-links, .top-lang-bar { display: none; }
             .customers-section, .contact-container, .capability-section, .stats-row, .popup-card { flex-direction: column; text-align: center; }
-            .cust-right, .capacity-bar, .selection-grid { grid-template-columns: 1fr 1fr; }
-            .popup-card { width: 95%; max-height: 90vh; overflow-y: auto; }
+            .cust-right, .capacity-bar { grid-template-columns: 1fr 1fr; }
             .video-wrapper { height: 350px; }
         }
     </style>
 </head>
 <body>
 
+    <!-- VIDEO MODAL -->
+    <div class="video-modal" id="videoModal" onclick="closeVideo()">
+        <iframe id="videoIframe" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </div>
+
     <a href="https://wa.me/8618028737006" class="wa-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
 
     <!-- LEAD MAGNET POPUP -->
     <div class="popup-overlay" id="popup">
         <div class="popup-card">
-            <span class="close-popup" onclick="closePopup()">&times;</span>
-            <div class="popup-left">
-                <img src="https://sc02.alicdn.com/kf/A1d39a41c992341cb813da972f105015bz.png" alt="2026 Catalog">
-            </div>
-            <div class="popup-right">
-                <h2>Download Free Catalog</h2>
-                <p>Get instant access to our latest 2026 Security Camera & Baby Monitor collection with full specs and wholesale pricing.</p>
-                <form onsubmit="event.preventDefault(); alert('Success! We will email you the catalog shortly.'); closePopup();">
-                    <input type="email" class="popup-input" placeholder="Enter your business email" required>
-                    <button type="submit" class="popup-btn">DOWNLOAD NOW</button>
+            <span style="position:absolute; top:20px; right:30px; font-size:30px; cursor:pointer;" onclick="closePopup()">&times;</span>
+            <div class="popup-left"><img src="https://sc02.alicdn.com/kf/A1d39a41c992341cb813da972f105015bz.png"></div>
+            <div class="popup-right" style="flex:1.2; padding:50px;">
+                <h2 data-i18n="pop-title">Download Free Catalog</h2>
+                <p data-i18n="pop-desc">Get instant access to our latest 2026 Security Camera collection.</p>
+                <form onsubmit="event.preventDefault(); alert('Success!'); closePopup();">
+                    <input type="email" style="width:100%; padding:15px; border:1px solid #ddd; border-radius:10px; margin-bottom:20px;" placeholder="Business Email" required>
+                    <button type="submit" style="width:100%; background:var(--main-blue); color:#fff; padding:18px; border:none; border-radius:10px; font-weight:800;" data-i18n="pop-btn">DOWNLOAD NOW</button>
                 </form>
             </div>
         </div>
     </div>
 
-    <!-- TOP BAR -->
+    <!-- LANGUAGE BAR -->
     <div class="top-lang-bar">
-        <span class="lang-item active">English</span>
-        <span class="lang-item">Deutsch</span>
-        <span class="lang-item">Français</span>
-        <span class="lang-item">Español</span>
-        <span class="lang-item">Pусский</span>
-        <span class="lang-item">العربية</span>
-        <span class="lang-item">日本語</span>
+        <span class="lang-item active" onclick="translatePage('en', this)">English</span>
+        <span class="lang-item" onclick="translatePage('de', this)">Deutsch</span>
+        <span class="lang-item" onclick="translatePage('fr', this)">Français</span>
+        <span class="lang-item" onclick="translatePage('es', this)">Español</span>
+        <span class="lang-item" onclick="translatePage('ru', this)">Pусский</span>
+        <span class="lang-item" onclick="translatePage('jp', this)">日本語</span>
     </div>
 
     <!-- NAV -->
     <div class="nav-wrapper">
         <div class="nav-capsule">
             <ul class="nav-links left">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
+                <li><a href="#home" data-i18n="nav-home">Home</a></li>
+                <li><a href="#about" data-i18n="nav-about">About</a></li>
             </ul>
             <div class="logo-box"><img src="https://sc01.alicdn.com/kf/Hc7d413a2205a41d79a8be13f18e2dc57U.png" class="logo-img"></div>
             <ul class="nav-links right">
-                <li><a href="#products">Products</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#products" data-i18n="nav-products">Products</a></li>
+                <li><a href="#contact" data-i18n="nav-contact">Contact</a></li>
             </ul>
         </div>
     </div>
 
-    <!-- HERO SLIDER -->
+    <!-- HERO -->
     <section class="slider-container" id="home">
         <div class="slides-wrapper" id="slider">
-            <div class="slide">
-                <img src="https://sc02.alicdn.com/kf/A640a5f404bc242b2b818cab8c6759c4eQ.png">
-                <div class="caption"><h2>Advanced 4K Solar Security Cameras</h2></div>
-            </div>
-            <div class="slide">
-                <img src="https://sc02.alicdn.com/kf/Aa765a8e7a5b94377a3d0ba2eda83870f2.png">
-                <div class="caption"><h2>Smart AI Baby Monitors</h2></div>
-            </div>
+            <div class="slide"><img src="https://sc02.alicdn.com/kf/A640a5f404bc242b2b818cab8c6759c4eQ.png"><div class="caption"><h2 data-i18n="hero-1">Advanced 4K Solar Security Cameras</h2></div></div>
+            <div class="slide"><img src="https://sc02.alicdn.com/kf/Aa765a8e7a5b94377a3d0ba2eda83870f2.png"><div class="caption"><h2 data-i18n="hero-2">Smart AI Baby Monitors</h2></div></div>
         </div>
     </section>
 
-    <!-- CAPACITY BAR -->
+    <!-- CAPACITY -->
     <div class="capacity-bar">
-        <div class="cap-item"><h3>200,000+</h3><p>Monthly Capacity</p></div>
-        <div class="cap-item"><h3>14+ Years</h3><p>Experience</p></div>
-        <div class="cap-item"><h3>3-7 Days</h3><p>Sampling</p></div>
-        <div class="cap-item"><h3>CE/FCC/RoHS</h3><p>Certified</p></div>
+        <div class="cap-item"><h3>200,000+</h3><p data-i18n="cap-1">Monthly Capacity</p></div>
+        <div class="cap-item"><h3>14+ Years</h3><p data-i18n="cap-2">Experience</p></div>
+        <div class="cap-item"><h3>3-7 Days</h3><p data-i18n="cap-3">Sampling</p></div>
+        <div class="cap-item"><h3>CE/FCC/RoHS</h3><p data-i18n="cap-4">Certified</p></div>
     </div>
+
+    <!-- WHO WE ARE (VIDEO & STATS) -->
+    <section class="who-we-are" id="about">
+        <div class="who-header">
+            <h2 data-i18n="who-title">Who We Are</h2>
+            <p data-i18n="who-desc">Rscamtom is a high-tech manufacturer specializing in AI security solutions and baby monitors.</p>
+            <a href="#contact" class="btn-view-more" data-i18n="view-more">View More</a>
+        </div>
+        <div class="video-wrapper" onclick="openVideo('https://www.youtube.com/embed/dQw4w9WgXcQ')">
+            <video class="bg-video" autoplay muted loop playsinline><source src="https://assets.mixkit.co/videos/preview/mixkit-circuit-board-details-and-components-close-up-34533-large.mp4" type="video/mp4"></video>
+            <div class="video-content-overlay"><div class="play-btn-glow"><i class="fas fa-play"></i></div><p style="margin-top:20px; font-weight:700; text-transform:uppercase;">Watch Factory Tour</p></div>
+        </div>
+        <div class="stats-row">
+            <div class="stat-box"><h3>14+</h3><p data-i18n="stat-1">Years Experience</p></div>
+            <div class="stat-box"><h3>200k+</h3><p data-i18n="stat-2">Monthly Units</p></div>
+            <div class="stat-box"><h3>50+</h3><p data-i18n="stat-3">Countries Served</p></div>
+            <div class="stat-box"><h3>Professional</h3><p data-i18n="stat-4">R&D Team</p></div>
+        </div>
+    </section>
 
     <!-- PRODUCT SERIES -->
     <section class="products-section" id="products">
-        <h2 style="font-size:36px; font-weight:800; margin-bottom:50px;">Professional Product Series</h2>
+        <h2 style="font-size:36px; font-weight:800; margin-bottom:50px;" data-i18n="prod-title">Professional Product Series</h2>
         <div class="product-grid">
-            <div class="product-card">
-                <img src="https://sc02.alicdn.com/kf/A640a5f404bc242b2b818cab8c6759c4eQ.png">
-                <div class="product-info"><h3>Solar Security</h3></div>
-            </div>
-            <div class="product-card">
-                <img src="https://sc02.alicdn.com/kf/Aa765a8e7a5b94377a3d0ba2eda83870f2.png">
-                <div class="product-info"><h3>Baby Monitors</h3></div>
-            </div>
-            <div class="product-card">
-                <img src="https://sc02.alicdn.com/kf/A43f733157e8a4a58b85b46e890f5c120i.png">
-                <div class="product-info"><h3>Pet Technology</h3></div>
-            </div>
-            <div class="product-card">
-                <img src="https://sc02.alicdn.com/kf/A20245a44046c4309a455a5b131805da5y.png">
-                <div class="product-info"><h3>Dash Camera</h3></div>
-            </div>
+            <div class="product-card"><img src="https://sc02.alicdn.com/kf/A640a5f404bc242b2b818cab8c6759c4eQ.png"><div style="padding:20px;"><h3 data-i18n="cat-1">Solar Security</h3></div></div>
+            <div class="product-card"><img src="https://sc02.alicdn.com/kf/Aa765a8e7a5b94377a3d0ba2eda83870f2.png"><div style="padding:20px;"><h3 data-i18n="cat-2">Baby Monitors</h3></div></div>
+            <div class="product-card"><img src="https://sc02.alicdn.com/kf/A43f733157e8a4a58b85b46e890f5c120i.png"><div style="padding:20px;"><h3 data-i18n="cat-3">Pet Technology</h3></div></div>
+            <div class="product-card"><img src="https://sc02.alicdn.com/kf/A20245a44046c4309a455a5b131805da5y.png"><div style="padding:20px;"><h3 data-i18n="cat-4">Dash Camera</h3></div></div>
         </div>
     </section>
 
-    <!-- WHO WE ARE (HIGH-TECH VIDEO) -->
-    <section class="who-we-are" id="about">
-        <div class="who-header">
-            <h2>Who We Are</h2>
-            <p>Rscamtom is a high-tech enterprise integrating R&D, production, and global marketing. We provide the world with intelligent and reliable security solutions.</p>
-            <a href="#contact" class="btn-view-more">View More</a>
-        </div>
-        <div class="video-wrapper">
-            <video class="bg-video" autoplay muted loop playsinline>
-                <source src="https://assets.mixkit.co/videos/preview/mixkit-circuit-board-details-and-components-close-up-34533-large.mp4" type="video/mp4">
-            </video>
-            <div class="video-content-overlay">
-                <div class="play-btn-glow"><i class="fas fa-play"></i></div>
-                <p style="margin-top: 20px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase;">Watch Factory Tour</p>
-            </div>
-        </div>
-        <div class="stats-row">
-            <div class="stat-box"><h3>14+</h3><p>Years Experience</p></div>
-            <div class="stat-box"><h3>200k+</h3><p>Monthly Units</p></div>
-            <div class="stat-box"><h3>50+</h3><p>Countries Served</p></div>
-            <div class="stat-box"><h3>Professional</h3><p>R&D Team</p></div>
-        </div>
-    </section>
-
-    <!-- CUSTOMERS -->
+    <!-- CUSTOMERS SECTION -->
     <section class="customers-section">
         <div class="cust-left">
             <img src="https://sc01.alicdn.com/kf/Hc7d413a2205a41d79a8be13f18e2dc57U.png" class="cust-logo">
-            <h2>Customers Who Work with Rscamtom</h2>
-            <p>We are the trusted manufacturing partner for top-tier retailers and distributors worldwide.</p>
+            <h2 data-i18n="cust-title">Customers Who Work with Rscamtom</h2>
+            <p data-i18n="cust-desc">We partner with top-tier retailers and distributors worldwide.</p>
         </div>
         <div class="cust-right">
             <div class="cust-card"><h3>40%</h3><p>Top Amazon Sellers</p></div>
@@ -280,15 +241,9 @@
     <section class="capability-section">
         <div class="cap-left"><img src="https://sc02.alicdn.com/kf/Adc3636013a954f1ba15e0f37def38b5bV.png"></div>
         <div class="cap-right">
-            <h2>Bring Your Ideas to Reality</h2>
-            <div class="step">
-                <div class="step-icon"><i class="fas fa-microchip"></i></div>
-                <div class="step-text"><h4>Electronic Engineering</h4><p>In-house PCB layout and firmware optimization.</p></div>
-            </div>
-            <div class="step">
-                <div class="step-icon"><i class="fas fa-industry"></i></div>
-                <div class="step-text"><h4>Mass Production</h4><p>200,000+ units monthly output with 100% QA.</p></div>
-            </div>
+            <h2 data-i18n="cap-title">Bring Your Ideas to Reality</h2>
+            <div class="step"><div class="step-icon"><i class="fas fa-microchip"></i></div><div><h4 data-i18n="rd-1">Electronic Engineering</h4><p data-i18n="rd-1-d">In-house PCB layout and firmware optimization.</p></div></div>
+            <div class="step"><div class="step-icon"><i class="fas fa-industry"></i></div><div><h4 data-i18n="rd-2">Mass Production</h4><p data-i18n="rd-2-d">200,000+ units monthly output with 100% QA.</p></div></div>
         </div>
     </section>
 
@@ -296,51 +251,48 @@
     <section class="contact-section" id="contact">
         <div class="contact-container">
             <div class="contact-left">
-                <h2>Get In Touch</h2>
-                <p style="font-size:24px; font-weight:700; margin-bottom:30px;">Whether You're Sourcing 50 Units or 50,000 — Let's Talk.</p>
-                <p><i class="fas fa-envelope"></i> info@rscamtom.com</p>
-                <p><i class="fab fa-whatsapp" style="color:#25d366;"></i> +86 180-2873-7006</p>
+                <h2 data-i18n="con-title">Get In Touch</h2>
+                <p style="font-size:24px; font-weight:700; margin-top:20px;" data-i18n="con-sub">Whether You're Sourcing 50 Units or 50,000 — Let's Talk.</p>
             </div>
             <div class="contact-right">
-                <h3 style="font-size:32px; font-weight:800; margin-bottom:30px;">Get a Free Quote</h3>
+                <h3 data-i18n="quote-title">Get a Free Quote</h3>
                 <form>
-                    <div style="display:grid; grid-template-columns:1fr 1fr; gap:15px; margin-bottom:15px;">
-                        <input type="text" class="form-input" placeholder="Name" required>
-                        <input type="email" class="form-input" placeholder="Email" required>
+                    <input type="text" style="width:100%; padding:15px; border:1px solid #ddd; border-radius:10px; margin-bottom:15px;" placeholder="Name" required>
+                    <input type="email" style="width:100%; padding:15px; border:1px solid #ddd; border-radius:10px; margin-bottom:15px;" placeholder="Email" required>
+                    <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:8px; margin-bottom:20px;">
+                        <div class="select-box active">Samples</div><div class="select-box">Stock</div><div class="select-box">OEM</div><div class="select-box">Project</div>
                     </div>
-                    <label style="font-weight:700; font-size:13px; margin-bottom:10px; display:block;">Requirement:</label>
-                    <div class="selection-grid">
-                        <div class="select-box active">Samples</div>
-                        <div class="select-box">Stock</div>
-                        <div class="select-box">OEM/ODM</div>
-                        <div class="select-box">Project</div>
-                    </div>
-                    <button type="submit" class="btn-submit">SEND INQUIRY NOW</button>
+                    <button type="submit" style="width:100%; background:var(--main-blue); color:#fff; padding:18px; border:none; border-radius:10px; font-weight:800;" data-i18n="btn-send">SEND INQUIRY NOW</button>
                 </form>
             </div>
         </div>
     </section>
 
-    <footer>
-        <img src="https://sc01.alicdn.com/kf/Hc7d413a2205a41d79a8be13f18e2dc57U.png" class="f-logo">
-        <p>© 2026 Rscamtom Technology. All Rights Reserved.</p>
-    </footer>
+    <footer><img src="https://sc01.alicdn.com/kf/Hc7d413a2205a41d79a8be13f18e2dc57U.png" style="height:30px; filter:brightness(0) invert(1); margin-bottom:20px;"><p>© 2026 Rscamtom Technology. All Rights Reserved.</p></footer>
 
     <script>
-        // Hero Slider
+        const i18n = {
+            en: { "nav-home": "Home", "nav-about": "About", "nav-products": "Products", "nav-contact": "Contact", "hero-1": "Advanced 4K Solar Security Cameras", "hero-2": "Smart AI Baby Monitors", "who-title": "Who We Are", "who-desc": "Rscamtom is a high-tech manufacturer specializing in AI security solutions.", "view-more": "View More", "quote-title": "Get a Free Quote", "btn-send": "SEND INQUIRY NOW", "pop-title": "Download Free Catalog", "pop-btn": "DOWNLOAD NOW", "cap-1": "Monthly Capacity", "cap-2": "Experience", "cap-3": "Sampling", "cap-4": "Certified", "stat-1": "Years Experience", "stat-2": "Monthly Units", "stat-3": "Countries Served", "stat-4": "R&D Team", "prod-title": "Professional Product Series", "cat-1": "Solar Security", "cat-2": "Baby Monitors", "cat-3": "Pet Technology", "cat-4": "Dash Camera", "cust-title": "Customers Who Work with Rscamtom", "cust-desc": "We partner with top-tier retailers and distributors worldwide.", "cap-title": "Bring Your Ideas to Reality", "rd-1": "Electronic Engineering", "rd-1-d": "In-house PCB layout and firmware optimization.", "rd-2": "Mass Production", "rd-2-d": "200,000+ units monthly output with 100% QA.", "con-title": "Get In Touch", "con-sub": "Whether You're Sourcing 50 Units or 50,000 — Let's Talk." },
+            de: { "nav-home": "Heim", "nav-about": "Über uns", "nav-products": "Produkte", "nav-contact": "Kontakt", "hero-1": "Fortschrittliche 4K-Solar-Sicherheitskameras", "hero-2": "Intelligente KI-Babyphone", "who-title": "Wer wir sind", "who-desc": "Rscamtom ist ein High-Tech-Hersteller, der sich auf KI-Sicherheitslösungen spezialisiert hat.", "view-more": "Mehr sehen", "quote-title": "Kostenloses Angebot", "btn-send": "ANFRAGE JETZT SENDEN", "pop-title": "Katalog herunterladen", "pop-btn": "JETZT HERUNTERLADEN", "cap-1": "Monatliche Kapazität", "cap-2": "Erfahrung", "cap-3": "Probenahme", "cap-4": "Zertifiziert" },
+            jp: { "nav-home": "ホーム", "nav-about": "会社概要", "nav-products": "製品", "nav-contact": "お問い合わせ", "hero-1": "高度な4Kソーラー防犯カメラ", "hero-2": "スマートAIベビーモニター", "who-title": "会社概要", "who-desc": "RscamtomはAIセキュリティソリューションを専門とするハイテクメーカーです。", "view-more": "もっと見る", "quote-title": "無料お見積り", "btn-send": "今すぐ送信" }
+        };
+
+        function translatePage(lang, btn) {
+            document.querySelectorAll('.lang-item').forEach(el => el.classList.remove('active'));
+            btn.classList.add('active');
+            const dict = i18n[lang] || i18n.en;
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if(dict[key]) el.innerText = dict[key];
+            });
+        }
+
+        function openVideo(url) { document.getElementById('videoModal').style.display = 'flex'; document.getElementById('videoIframe').src = url + "?autoplay=1"; }
+        function closeVideo() { document.getElementById('videoModal').style.display = 'none'; document.getElementById('videoIframe').src = ""; }
         let cur = 0; setInterval(() => { cur = (cur + 1) % 2; document.getElementById('slider').style.transform = `translateX(-${cur * 50}%)`; }, 5000);
-        
-        // Popup Logic (Trigger after 5s)
         setTimeout(() => { document.getElementById('popup').style.display = 'flex'; }, 5000);
         function closePopup() { document.getElementById('popup').style.display = 'none'; }
-        
-        // Form Interactivity
-        document.querySelectorAll('.select-box').forEach(box => {
-            box.addEventListener('click', function() {
-                this.parentElement.querySelectorAll('.select-box').forEach(b => b.classList.remove('active'));
-                this.classList.add('active');
-            });
-        });
+        document.querySelectorAll('.select-box').forEach(box => { box.addEventListener('click', function() { this.parentElement.querySelectorAll('.select-box').forEach(b => b.classList.remove('active')); this.classList.add('active'); }); });
     </script>
 </body>
 </html>
